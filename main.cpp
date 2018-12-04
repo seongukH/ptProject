@@ -10,8 +10,8 @@ int main(int argc, char *argv[])
     UDPNetwork Server;
     UDPNetwork client;
 
-    client.sendMessage();
-    Server.readyRead();
+    //client.sendMessage();
+    //Server.readyRead();
 
     qmlRegisterType<UDPNetwork>("UDPNetwork", 1, 0, "UDPNetwork");
     qmlRegisterType<ControlPlane>("ControlPlane", 1, 0, "ControlPlane");

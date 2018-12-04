@@ -13,7 +13,7 @@ void ControlPlane::setName(QString name)
 void ControlPlane::moveFront()
 {
    g_data->state.a_x += qSin(qDegreesToRadians( g_data->state.a_r));  //x
-   g_data->state.a_y += qCos(qDegreesToRadians(g_data->state.a_r)); //y
+   g_data->state.a_y -= qCos(qDegreesToRadians(g_data->state.a_r)); //y
 
 }
 

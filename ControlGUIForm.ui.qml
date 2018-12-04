@@ -174,14 +174,14 @@ Item {
         Text {
             id: x_txt
             x: 455
-            y: 74
+            y: 57
             text: qsTr("0")
             font.pixelSize: 12
         }
 
         Text {
             id: y_txt
-            x: 491
+            x: 455
             y: 74
             text: qsTr("0")
             font.pixelSize: 12

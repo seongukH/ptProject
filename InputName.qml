@@ -21,7 +21,7 @@ InputNameForm {
         running: false
 
         onTriggered: {
-            mgrudp.sendMessage();
+            mgrudp.sendStatus();
         }
     }
 
