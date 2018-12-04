@@ -27,14 +27,14 @@ Item {
         width: 115
         height: 30
         text: qsTr("Text Edit")
-        z: 3
+        z: 1
         horizontalAlignment: Text.AlignHCenter
         font.pixelSize: 20
 
         Rectangle {
             id: rectangle1
             color: "#faf7f7"
-            z: -1
+            z: -2
             anchors.fill: parent
         }
     }

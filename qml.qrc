@@ -3,5 +3,7 @@
         <file>main.qml</file>
         <file>InputName.qml</file>
         <file>InputNameForm.ui.qml</file>
+        <file>ControlGUI.qml</file>
+        <file>ControlGUIForm.ui.qml</file>
     </qresource>
 </RCC>
