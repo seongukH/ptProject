@@ -11,7 +11,7 @@ void UDPNetwork::sendMessage()
 {
    QString name = "airplane001"; //g_data->state.a_name = "airplane001";
 
-   g_data->state={"airplane001", 1000, 2, 10, 100};
+   g_data->state={"airplane001", "1000", "2", "10", "100"};
 
   // char integer[10] ;
 
@@ -21,7 +21,13 @@ void UDPNetwork::sendMessage()
 
     QByteArray Data;
 
-    Data.append( g_data->state.a_name + g_data->state.a_x + g_data->state.a_y );
+    Data.append( "sendMessage/");
+    Data.append( g_data->state.a_name+"/");
+    Data.append( g_data->state.a_x+"/");
+    Data.append( g_data->state.a_y+"/");
+    Data.append( g_data->state.a_r+"/");
+    Data.append( g_data->state.status+"/");
+
 
     socket->writeDatagram(Data, QHostAddress::LocalHost, 1234);
     qDebug()<<"send : "<<Data;
