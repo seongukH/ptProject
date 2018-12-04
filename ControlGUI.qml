@@ -2,6 +2,9 @@ import QtQuick 2.4
 
 ControlGUIForm {
 
+    //-----------------------
+    //ControlButtons
+    //-----------------------
 
     downButton.onPressed: {
     }
@@ -17,6 +20,16 @@ ControlGUIForm {
     rightButton.onPressed: {
         mgrcontrol.turnRight();
     }
+
+
+    //-----------------------
+    //ChatComponents
+    //-----------------------
+
+
+    //-----------------------
+    //Show name&location
+    //-----------------------
 
 
 
