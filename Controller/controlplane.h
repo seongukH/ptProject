@@ -12,13 +12,13 @@ public:
 
    Q_INVOKABLE  void setName(QString name);
 
-  Q_INVOKABLE  void moveFromt();
+  Q_INVOKABLE  void moveFront();
   Q_INVOKABLE  void moveBack();
 
   Q_INVOKABLE  void turnRight();
   Q_INVOKABLE  void turnLeft();
 
-  Q_INVOKABLE  void setStatus();
+  Q_INVOKABLE  void setStatus(int stat);
 
 signals:
 

@@ -1,8 +1,15 @@
 import QtQuick 2.4
+import QtQuick.Controls 1.6
 
 Item {
     width: 640
     height: 480
+    property alias x_txt: x_txt
+    property alias y_txt: y_txt
+    property alias name_txt: name_txt
+    property alias textField: textField
+    property alias button: button
+    property alias textArea: textArea
     property alias state_green: state_green
     property alias state_red: state_red
     property alias state_yellow: state_yellow
@@ -128,6 +135,56 @@ Item {
                 anchors.topMargin: 0
                 anchors.fill: parent
             }
+        }
+
+        TextArea {
+            id: textArea
+            x: 347
+            y: 108
+            width: 240
+            height: 188
+        }
+
+        TextField {
+            id: textField
+            x: 347
+            y: 314
+            width: 152
+            height: 23
+            placeholderText: qsTr("Text Field")
+        }
+
+        Button {
+            id: button
+            x: 512
+            y: 314
+            text: qsTr("Button")
+        }
+
+        Text {
+            id: name_txt
+            x: 347
+            y: 74
+            width: 101
+            height: 28
+            text: qsTr("Text")
+            font.pixelSize: 12
+        }
+
+        Text {
+            id: x_txt
+            x: 455
+            y: 74
+            text: qsTr("0")
+            font.pixelSize: 12
+        }
+
+        Text {
+            id: y_txt
+            x: 491
+            y: 74
+            text: qsTr("0")
+            font.pixelSize: 12
         }
     }
 }
