@@ -2,7 +2,7 @@
 #include <QQmlApplicationEngine>
 
 #include <Network/udpnetwork.h>
-
+#include <Controller/controlplane.h>
 int main(int argc, char *argv[])
 {
     QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
@@ -14,6 +14,7 @@ int main(int argc, char *argv[])
     Server.readyRead();
 
     qmlRegisterType<UDPNetwork>("UDPNetwork", 1, 0, "UDPNetwork");
+    qmlRegisterType<ControlPlane>("ControlPlane", 1, 0, "ControlPlane");
 
 
 
