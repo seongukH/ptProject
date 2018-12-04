@@ -8,8 +8,8 @@
 struct a_state{
 
     QString a_name;
-    qreal a_x = 500.0f;
-    qreal a_y = 30.0f;
+    qreal a_x = 500.f;
+    qreal a_y = 30.f;
     float a_r = 0;
     int status = 1;
 };

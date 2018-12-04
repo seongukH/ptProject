@@ -7,7 +7,12 @@ UDPNetwork::UDPNetwork(QObject *parent) : QObject(parent)
     connect (socket, SIGNAL(readyRead()), this, SLOT(readyRead()));
 }
 
-void UDPNetwork::sendMessage()
+
+//-----------------------------
+//send udp
+//-----------------------------
+
+void UDPNetwork::sendStatus()
 {
    QString name = "airplane001"; //g_data->state.a_name = "airplane001";
 
@@ -24,7 +29,7 @@ void UDPNetwork::sendMessage()
 
     QByteArray Data;
 
-    Data.append( "sendMessage/");
+    Data.append( "sendStatus/");
     Data.append( g_data->state.a_name+"/");
     Data.append( itoa( g_data->state.a_x, a_x, 10));
     Data.append( "/");
@@ -40,6 +45,44 @@ void UDPNetwork::sendMessage()
     socket->writeDatagram(Data, QHostAddress::LocalHost, 1234);
     qDebug()<<"send : "<<Data;
 }
+
+void UDPNetwork::sendMessage(QString string)
+{
+    QByteArray Data;
+    Data.append( "sendMessage/");
+    Data.append( g_data->state.a_name+"/");
+    Data.append( string);
+    Data.append( "/");
+
+    socket->writeDatagram(Data, QHostAddress::LocalHost, 1234);
+    qDebug()<<"send : "<<Data;
+
+}
+
+//-----------------------------
+//show status on controlgui
+//-----------------------------
+
+QString UDPNetwork::getName()
+{
+    return g_data->state.a_name;
+}
+
+qreal UDPNetwork::getX()
+{
+    return roundf(g_data->state.a_x*100)/100 ;
+}
+
+qreal UDPNetwork::getY()
+{
+    return roundf(g_data->state.a_y*100)/100 ;
+
+}
+
+
+//-----------------------------
+//get udp
+//-----------------------------
 
 void UDPNetwork::readyRead()
 {
