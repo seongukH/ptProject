@@ -2,6 +2,7 @@ import QtQuick 2.9
 import QtQuick.Window 2.2
 
 import UDPNetwork 1.0
+import ControlPlane 1.0
 
 Window {
     visible: true
@@ -19,19 +20,13 @@ Window {
     }
 
 
-    Timer{
-        interval: 1000
-        repeat:true
-        running: true
-
-        onTriggered: {
-            mgrudp.sendMessage();
-        }
-    }
-
 
 
     UDPNetwork{
         id : mgrudp
+    }
+
+    ControlPlane{
+        id : mgrcontrol
     }
 }

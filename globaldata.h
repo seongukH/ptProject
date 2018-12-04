@@ -6,10 +6,10 @@
 struct a_state{
 
     QString a_name;
-    QString a_x;
-    QString a_y;
-    QString a_r;
-    QString status;
+    int a_x;
+    int a_y;
+    int a_r;
+    int status;
 };
 
 class GlobalData
