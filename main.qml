@@ -19,6 +19,18 @@ Window {
     }
 
 
+    Timer{
+        interval: 1000
+        repeat:true
+        running: true
+
+        onTriggered: {
+            mgrudp.sendMessage();
+        }
+    }
+
+
+
     UDPNetwork{
         id : mgrudp
     }

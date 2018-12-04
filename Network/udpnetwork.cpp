@@ -9,11 +9,22 @@ UDPNetwork::UDPNetwork(QObject *parent) : QObject(parent)
 
 void UDPNetwork::sendMessage()
 {
-   QString name =  g_data->state.a_name = "airplane001";
+   QString name = "airplane001"; //g_data->state.a_name = "airplane001";
+
+   g_data->state={"airplane001", 1000, 2, 10, 100};
+
+  // char integer[10] ;
+
+   //  itoa(123456, integer, 10);
+
+  //   qDebug()<<integer;
 
     QByteArray Data;
-    Data.append(name);
+
+    Data.append( g_data->state.a_name + g_data->state.a_x + g_data->state.a_y );
+
     socket->writeDatagram(Data, QHostAddress::LocalHost, 1234);
+    qDebug()<<"send : "<<Data;
 }
 
 void UDPNetwork::readyRead()
