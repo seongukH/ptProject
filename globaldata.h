@@ -2,14 +2,16 @@
 #define GLOBALDATA_H
 
 #include <QObject>
+#include <QDebug>
+#include <QtMath>
 
 struct a_state{
 
     QString a_name;
-    int a_x;
-    int a_y;
-    int a_r;
-    int status;
+    qreal a_x = 500.0f;
+    qreal a_y = 30.0f;
+    float a_r = 0;
+    int status = 1;
 };
 
 class GlobalData

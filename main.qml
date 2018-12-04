@@ -2,6 +2,7 @@ import QtQuick 2.9
 import QtQuick.Window 2.2
 
 import UDPNetwork 1.0
+import ControlPlane 1.0
 
 Window {
     visible: true
@@ -19,7 +20,13 @@ Window {
     }
 
 
+
+
     UDPNetwork{
         id : mgrudp
+    }
+
+    ControlPlane{
+        id : mgrcontrol
     }
 }
