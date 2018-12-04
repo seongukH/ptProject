@@ -4,6 +4,8 @@
 #include <QObject>
 #include <QUdpSocket>
 
+#include <globaldata.h>
+
 class UDPNetwork : public QObject
 {
     Q_OBJECT
@@ -17,6 +19,8 @@ public slots:
 
 private:
     QUdpSocket *socket;
+
+    //GlobalData *g_data = GlobalData::getInstance();
 };
 
 #endif // UDPNETWORK_H

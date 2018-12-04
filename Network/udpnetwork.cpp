@@ -9,6 +9,8 @@ UDPNetwork::UDPNetwork(QObject *parent) : QObject(parent)
 
 void UDPNetwork::sendMessage()
 {
+
+
     QByteArray Data;
     Data.append("hello udp");
     socket->writeDatagram(Data, QHostAddress::LocalHost, 1234);
